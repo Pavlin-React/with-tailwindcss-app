@@ -1,15 +1,16 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Login from "../components/Login";
 
 export default function Home() {
+  let isAuth = false;
+  if (!isAuth) return <Login />;
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="h-screen">
       <Head>
         <title>Web 3</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>
-        Welcome to 5 days Metaverse challenge
-      </h1>
+      <h1>Welcome to App</h1>
     </div>
-  )
+  );
 }
